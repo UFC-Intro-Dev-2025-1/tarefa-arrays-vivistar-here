@@ -15,29 +15,31 @@
 // 9. Criar um novo array com os valores dobrados usando o método map. ❌
 // 10. Calcular a soma de todos os elementos do array usando o método reduce. ❌
 
-const numeros: number[] = [10, 20, 30, 40, 50];
+const números: number[] = [10, 20, 30, 40, 50];
 
 function mostrarArray(array: number[]): void {
     console.log('--------------------------------');
-    console.log(`Tamanho: `);
-    console.log(`Array: `);
+    console.log(`Tamanho: ${array.length}`);
+    console.log(`Array: [${array.join(' , ')}]`)
 }
-mostrarArray(numeros);
 
+números.push(60, 70);
 
+mostrarArray(números);
 
+const elementoExcluido = números.pop;
 
-
-const elementoExcluido = ;
-mostrarArray(numeros);
+mostrarArray(números);
 console.log(`Elemento excluído: ${elementoExcluido}`);
 
-numeros.forEach();
+números.forEach(function (number){
+    console.log(number);
+});
 
-const dobrados = numeros.map();
+const dobrados = números.map((elemento) => elemento * 2);
 mostrarArray(dobrados);
 
-const soma = numeros.reduce();
+const soma = números.reduce((acumulador, elemento) => acumulador + elemento, 0);
 console.log(`Soma dos elementos do array: ${soma}`);
 
 // para rodar o código, use o comando:
